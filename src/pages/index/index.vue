@@ -2,7 +2,7 @@
  * @Description:
  * @Author: wsy
  * @Date: 2023-07-15 15:10:30
- * @LastEditTime: 2023-07-15 23:13:09
+ * @LastEditTime: 2023-07-15 23:54:23
  * @LastEditors: wsy
 -->
 <script setup lang="ts">
@@ -33,7 +33,7 @@ function goTest() {
     <uni-card>
       <text>{{ title }} </text>
     </uni-card>
-    <button type="primary" bg="red-800">页面主操作 Normal</button>
+    <button type="primary">页面主操作 Normal</button>
   </view>
 </template>
 
