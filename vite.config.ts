@@ -1,10 +1,17 @@
+/*
+ * @Description:
+ * @Author: wsy
+ * @Date: 2023-07-15 20:42:18
+ * @LastEditTime: 2023-07-15 23:40:54
+ * @LastEditors: wsy
+ */
 import { resolve } from 'node:path';
 import uni from '@dcloudio/vite-plugin-uni';
 import AutoImportTypes from 'auto-import-types';
 import PiniaAutoRefs from 'pinia-auto-refs';
 import Unocss from 'unocss/vite';
 import AutoImport from 'unplugin-auto-import/vite';
-import Components from 'unplugin-vue-components/vite';
+import UniHelperComponents from '@uni-helper/vite-plugin-uni-components';
 import { defineConfig } from 'vite';
 
 import env from './src/config/env';
@@ -35,9 +42,13 @@ export default defineConfig({
         enabled: true
       }
     }),
-    Components({
-      extensions: ['vue'],
-      dts: 'src/components.d.ts'
+    // Components({
+    //   extensions: ['vue'],
+    //   dts: 'src/components.d.ts'
+    // }),
+    UniHelperComponents({
+      dts: 'src/components.d.ts',
+      directoryAsNamespace: true
     }),
     uni()
   ],
