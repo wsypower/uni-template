@@ -1,5 +1,11 @@
-const fs = require('fs')
-
+/*
+ * @Description:
+ * @Author: wsy
+ * @Date: 2023-07-15 15:10:30
+ * @LastEditTime: 2023-07-15 20:39:00
+ * @LastEditors: wsy
+ */
+import fs from 'node:fs';
 const pagesStr = fs.readFileSync('./src/pages.json', 'utf-8');
 const pagesJson = JSON.parse(pagesStr);
 // tabBar页面
