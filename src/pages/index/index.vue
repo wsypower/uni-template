@@ -2,7 +2,7 @@
  * @Description:
  * @Author: wsy
  * @Date: 2023-07-15 15:10:30
- * @LastEditTime: 2023-07-15 17:08:16
+ * @LastEditTime: 2023-07-15 19:15:44
  * @LastEditors: wsy
 -->
 <script setup lang="ts">
@@ -18,13 +18,13 @@ function goTest() {
 </script>
 
 <template>
-  <view class="content" bg="red-600">
+  <view class="content w-750rpx">
     <image class="logo" src="/static/logo.png" />
     <view class="text-area">
       <text class="title">{{ title }}</text>
     </view>
     <view @click="changeTitle">changeTitle</view>
-    <view @click="goTest">这是测试页面1</view>
+    <view @click="goTest">这是测试页面</view>
   </view>
 </template>
 
