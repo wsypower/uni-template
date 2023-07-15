@@ -1,22 +1,25 @@
 <script setup lang="ts">
-defineProps({
-  scrollTop: {
-    type: Number,
-    default: 0
-  },
-  onScrollToLower: {
-    type: Function,
-    default: () => {
+import type {
+  ScrollViewOnScroll,
+  ScrollViewOnScrolltolower
+} from '@uni-helper/uni-app-types';
+
+withDefaults(
+  defineProps<{
+    scrollTop: number;
+    onScrollToLower: ScrollViewOnScrolltolower;
+    onScroll: ScrollViewOnScroll;
+  }>(),
+  {
+    scrollTop: 0,
+    onScrollToLower() {
       console.log('onScrollToLower');
-    }
-  },
-  onScroll: {
-    type: Function,
-    default: () => {
+    },
+    onScroll() {
       console.log('onScroll');
     }
   }
-});
+);
 </script>
 
 <template>
