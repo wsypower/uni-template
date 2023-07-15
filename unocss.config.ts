@@ -1,3 +1,10 @@
+/*
+ * @Description:
+ * @Author: wsy
+ * @Date: 2023-07-15 15:10:30
+ * @LastEditTime: 2023-07-15 16:56:20
+ * @LastEditors: wsy
+ */
 import type { Preset, Rule } from 'unocss';
 import { defineConfig, presetAttributify, presetUno } from 'unocss';
 
