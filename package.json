@@ -36,7 +36,7 @@
     "build:quickapp-webview": "uni build -p quickapp-webview",
     "build:quickapp-webview-huawei": "uni build -p quickapp-webview-huawei",
     "build:quickapp-webview-union": "uni build -p quickapp-webview-union",
-    "lint": "npm run tsc && npm run eslint && npm run stylelint",
+    "lint": "pnpm run tsc && pnpm run eslint && pnpm run stylelint",
     "tsc": "vue-tsc --noEmit --skipLibCheck",
     "eslint": "eslint --ext .vue,.ts src/ --fix",
     "stylelint": "stylelint \"src/**/*.(vue|scss|css)\" --fix",
