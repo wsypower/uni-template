@@ -29,7 +29,6 @@ function goTest() {
     </view>
     <view h-60rpx bg="blue" @click="changeTitle">changeTitle</view>
     <view @click="goTest">这是测试页面</view>
-    <Test></Test>
     <uni-card>
       <text>{{ title }} </text>
     </uni-card>

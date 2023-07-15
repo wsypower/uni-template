@@ -4,13 +4,10 @@ const a = 1;
 onMounted(() => {
   console.log('onMounted123');
 });
-function testFn() {
-  console.log(333);
-}
 </script>
 
 <template>
-  <div w-150rpx h150rpx bg="blue-400" @click="testFn">123</div>
+  <web-view src="https://www.baidu.com"></web-view>
 </template>
 
 <style lang="scss" scoped></style>
