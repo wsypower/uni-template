@@ -2,13 +2,17 @@
  * @Description:
  * @Author: wsy
  * @Date: 2023-07-15 15:10:30
- * @LastEditTime: 2023-07-15 19:15:44
+ * @LastEditTime: 2023-07-15 19:57:56
  * @LastEditors: wsy
 -->
 <script setup lang="ts">
 import { useTitle } from '@/hooks/useTitle';
 import { forward } from '@/utils/router';
+import user from '@/store/user';
 
+const userInf = user();
+userInf.userInfo.token = '123123123';
+console.log(userInf.userInfo.token);
 const { title, changeTitle } = useTitle();
 function goTest() {
   forward('test', {
@@ -18,7 +22,7 @@ function goTest() {
 </script>
 
 <template>
-  <view class="content w-750rpx">
+  <view class="content w-750rpx" bg="red">
     <image class="logo" src="/static/logo.png" />
     <view class="text-area">
       <text class="title">{{ title }}</text>

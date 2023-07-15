@@ -21,6 +21,7 @@ specifiers:
   '@dcloudio/uni-quickapp-webview': 3.0.0-3080720230703001
   '@dcloudio/uni-stacktracey': 3.0.0-3080720230703001
   '@dcloudio/vite-plugin-uni': 3.0.0-3080720230703001
+  '@types/vue-i18n': ^7.0.0
   '@vue/eslint-config-typescript': 11.0.2
   '@vue/tsconfig': 0.1.3
   auto-import-types: 0.0.4
@@ -36,6 +37,7 @@ specifiers:
   pinia: 2.0.33
   pinia-auto-refs: 0.0.5
   pinia-plugin-persist-uni: 1.2.0
+  pinia-plugin-unistorage: ^0.0.17
   postcss: ^8.4.26
   postcss-html: 1.5.0
   postcss-scss: 4.0.6
@@ -47,6 +49,7 @@ specifiers:
   stylelint-scss: 4.0.1
   typescript: 4.9.4
   unocss: 0.53.5
+  unocss-applet: ^0.5.3
   unplugin-auto-import: 0.15.1
   unplugin-vue-components: 0.24.1
   vite: 4.1.4
@@ -69,9 +72,12 @@ dependencies:
   '@dcloudio/uni-mp-toutiao': 3.0.0-3080720230703001_postcss@8.4.26+vue@3.2.47
   '@dcloudio/uni-mp-weixin': 3.0.0-3080720230703001_postcss@8.4.26+vue@3.2.47
   '@dcloudio/uni-quickapp-webview': 3.0.0-3080720230703001_postcss@8.4.26+vue@3.2.47
+  '@types/vue-i18n': 7.0.0_vue@3.2.47
   pinia: 2.0.33_yq2pyqi2yjztetnx45sawcgrle
   pinia-auto-refs: 0.0.5
   pinia-plugin-persist-uni: 1.2.0_pinia@2.0.33+vue@3.2.47
+  pinia-plugin-unistorage: 0.0.17_yq2pyqi2yjztetnx45sawcgrle
+  unocss-applet: 0.5.3
   vue: 3.2.47
   vue-i18n: 9.2.2_vue@3.2.47
 
@@ -3199,6 +3205,15 @@ packages:
     resolution: {integrity: sha512-cputDpIbFgLUaGQn6Vqg3/YsJwxUwHLO13v3i5ouxT4lat0khip9AEWxtERujXV9wxIB1EyF97BSJFt6vpdI8g==}
     dev: true
 
+  /@types/vue-i18n/7.0.0_vue@3.2.47:
+    resolution: {integrity: sha512-4e3EvN4k+B6eTq1qWDFW1wpzCgz+8nNCn6LAQTkcRoGJx9rVO5iYzyEogFTi9RwBJ588+Rx0nUwRFjKUYPe/BQ==}
+    deprecated: This is a stub types definition for vue-i18n (https://github.com/kazupon/vue-i18n). vue-i18n provides its own type definitions, so you don't need @types/vue-i18n installed!
+    dependencies:
+      vue-i18n: 9.2.2_vue@3.2.47
+    transitivePeerDependencies:
+      - vue
+    dev: false
+
   /@typescript-eslint/eslint-plugin/5.62.0_jhswujjatqemii5p3zv2edxeoq:
     resolution: {integrity: sha512-TiZzBSJja/LbhNPvk6yc0JrX9XqhQ0hdh6M2svYfsHGejaKFIAGd9MQ+ERIMzLGlN/kZoYIgdxFV0PuljTKXag==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
@@ -3329,6 +3344,33 @@ packages:
       eslint-visitor-keys: 3.4.1
     dev: true
 
+  /@unocss-applet/preset-applet/0.5.3:
+    resolution: {integrity: sha512-04nRinxbuMhq2oJOWUf7JjSZpnukXgqlY8fAERCH4vjwf0ZLRCXXIwbpv9w7Tj0X8O+uOLXQL/fDCzGx9kjrKQ==}
+    dependencies:
+      '@unocss-applet/utils': 0.5.3
+      '@unocss/core': 0.52.7
+      '@unocss/preset-mini': 0.52.7
+      '@unocss/preset-uno': 0.52.7
+    dev: false
+
+  /@unocss-applet/preset-rem-rpx/0.5.3:
+    resolution: {integrity: sha512-WdcIOrJsRyfSpuAnzPJtZULR9kO2hZXA/mJ5295r9cDnaul58XU4szboC8hZyH7gD++upl+Y3fMv25Lsev4PAg==}
+    dev: false
+
+  /@unocss-applet/transformer-applet/0.5.3:
+    resolution: {integrity: sha512-8nFle4isHxSz/c68FchFgulACUWZ9vBVPxD6lbyqwNS+MbOuwuaXTBO9ImIj4ypCiyGJruu8xTRJhhwZHWEiDg==}
+    dependencies:
+      '@unocss-applet/utils': 0.5.3
+    dev: false
+
+  /@unocss-applet/transformer-attributify/0.5.3:
+    resolution: {integrity: sha512-4KWgqZa30E/1zuEFpN1SwCDCFYGTdVs3BBvxghsVwk73Dl5biHuY5uavTUOhq87yFQAhk6iZKMn9o3YCVSiPRw==}
+    dev: false
+
+  /@unocss-applet/utils/0.5.3:
+    resolution: {integrity: sha512-dN12YCHkLkBp7fL4A/jOmjxxrp04ST+zCX+zI5965fIXk4jvB9t6PaB/viRIE+ISKD/Jhs0ygTpd1yx0YgrSGg==}
+    dev: false
+
   /@unocss/astro/0.53.5_vite@4.1.4:
     resolution: {integrity: sha512-W4A0uIN4xAzVH6Vwf5ukG8rJpCeIwQZcpZPrEBWsqY5YcHZcLTFGMHcNmxyeG0qoXpXoxtvHyXXhgGU0BY5ZEw==}
     dependencies:
@@ -3370,9 +3412,19 @@ packages:
       unconfig: 0.3.9
     dev: true
 
+  /@unocss/core/0.52.7:
+    resolution: {integrity: sha512-dZonrlfu33SkUMsZXlsyYSM79tr2nLer/hBEU2ZaemRik2KchxIUNlZV6kX1f1k3m+gEtVQOyx1MImpgLS8PWg==}
+    dev: false
+
   /@unocss/core/0.53.5:
     resolution: {integrity: sha512-jBvk4FeUAALAomGfMFFmrXLy01/5DjugdnWgawFAQpSToFTxbMHS7x+pXKu/18cq+YLS8uyl9S0Ywy1jNbfS3Q==}
     dev: true
+
+  /@unocss/extractor-arbitrary-variants/0.52.7:
+    resolution: {integrity: sha512-nJ4iE7nIRpoOIQfD8S58yG4qJd6AhVPEfEOf7ksX1u8xLf71rrBIojwraRXvv7aPqNdZiWvXdh/znpA/QC5b9w==}
+    dependencies:
+      '@unocss/core': 0.52.7
+    dev: false
 
   /@unocss/extractor-arbitrary-variants/0.53.5:
     resolution: {integrity: sha512-rSS3Q8/+lEwxXfXzEOFuhAQGMpaaZcBAYDiNCYS/9BqKrTzhSYG82Qy80ISpqSZr0BTLET4X3dC6B6Rd4GU5vQ==}
@@ -3415,6 +3467,13 @@ packages:
       - supports-color
     dev: true
 
+  /@unocss/preset-mini/0.52.7:
+    resolution: {integrity: sha512-c5VRzPwyAmIBWwz2ufEboYwHGiheG+V9SCmJJLHlu/gcW5KndFsxoeJPE6nOfXVmbx4AGq/rkzV35ZXtH8Iecw==}
+    dependencies:
+      '@unocss/core': 0.52.7
+      '@unocss/extractor-arbitrary-variants': 0.52.7
+    dev: false
+
   /@unocss/preset-mini/0.53.5:
     resolution: {integrity: sha512-aeVctTW0M41RXyCyQvhRawIh+ylhl7mlWfAjv7cP3ALvIRWbB6jUw1C8Ke6rU2vg0s0yaJKRuFPFmLMqGwzoSg==}
     dependencies:
@@ -3435,6 +3494,14 @@ packages:
       '@unocss/preset-mini': 0.53.5
     dev: true
 
+  /@unocss/preset-uno/0.52.7:
+    resolution: {integrity: sha512-J5royXxvaPvwRplZ2zwEcB1jJETp3dTA3sIezf9ydSNr4px3h6Ul6TxFDuJpBUWlx/cxP7aRWM0p9+e2ivdRkA==}
+    dependencies:
+      '@unocss/core': 0.52.7
+      '@unocss/preset-mini': 0.52.7
+      '@unocss/preset-wind': 0.52.7
+    dev: false
+
   /@unocss/preset-uno/0.53.5:
     resolution: {integrity: sha512-DRJMBkSqfz0EOzf5cwefkPF8J6lNvrhBp4ztw9blewDc2wTQqL/lAj/I/nbyOdXhJUOxhj/qj7gJjsNZctud0A==}
     dependencies:
@@ -3449,6 +3516,13 @@ packages:
       '@unocss/core': 0.53.5
       ofetch: 1.1.1
     dev: true
+
+  /@unocss/preset-wind/0.52.7:
+    resolution: {integrity: sha512-IT36cDftK7B+zDUElL4qdZZEj6iwknIpetXwuVvW/X8ljS/ocY/qfyjSX7C8k163FLAw7nTARFjW3xL066NsLw==}
+    dependencies:
+      '@unocss/core': 0.52.7
+      '@unocss/preset-mini': 0.52.7
+    dev: false
 
   /@unocss/preset-wind/0.53.5:
     resolution: {integrity: sha512-hSMF11Gx8oMDtePvXLmpArSNpQRHb098P8+qYpwvyNfS29i6agfjGBuIDk/f+j8mhqcfrEEuEmPIl2yojT9nxA==}
@@ -7182,6 +7256,16 @@ packages:
       vue-demi: 0.12.5_vue@3.2.47
     dev: false
 
+  /pinia-plugin-unistorage/0.0.17_yq2pyqi2yjztetnx45sawcgrle:
+    resolution: {integrity: sha512-Oo4KTWyZP+7/fRRGG5ACoFIBZznEgFt8SPSOcg99t5NHzFP1wSTAfgl25eRr7Tv11pkWyzgZSa3oMGVIBBs1MA==}
+    dependencies:
+      pinia: 2.0.33_yq2pyqi2yjztetnx45sawcgrle
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - typescript
+      - vue
+    dev: false
+
   /pinia/2.0.33_yq2pyqi2yjztetnx45sawcgrle:
     resolution: {integrity: sha512-HOj1yVV2itw6rNIrR2f7+MirGNxhORjrULL8GWgRwXsGSvEqIQ+SE0MYt6cwtpegzCda3i+rVTZM+AM7CG+kRg==}
     peerDependencies:
@@ -8378,6 +8462,15 @@ packages:
   /universalify/2.0.0:
     resolution: {integrity: sha512-hAZsKq7Yy11Zu1DE0OzWjw7nnLZmJZYTDZZyEFHZdUhV8FkH5MCfoU1XMaxXovpyW5nq5scPqq0ZDP9Zyl04oQ==}
     engines: {node: '>= 10.0.0'}
+
+  /unocss-applet/0.5.3:
+    resolution: {integrity: sha512-JlQZjrQYb4iHLw1tUAmW4tMo9Tz2j5xSFlYb/k83RVuvZoKYUDT/adFh5NvQ/25a+V7JFyvhsutgU3mZHjlXYQ==}
+    dependencies:
+      '@unocss-applet/preset-applet': 0.5.3
+      '@unocss-applet/preset-rem-rpx': 0.5.3
+      '@unocss-applet/transformer-applet': 0.5.3
+      '@unocss-applet/transformer-attributify': 0.5.3
+    dev: false
 
   /unocss/0.53.5_vite@4.1.4:
     resolution: {integrity: sha512-LXAdtzAaH8iEDWxW4t9i6TvJNw0OSrgdN+jw8rAZAWb73Nx51ZLoKPUB1rFvQMr2Li7LcsUj5hYpOrQbhhafYg==}
