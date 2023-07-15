@@ -29,6 +29,7 @@ function goTest() {
     </view>
     <view @click="changeTitle">changeTitle</view>
     <view @click="goTest">这是测试页面</view>
+    <Test></Test>
   </view>
 </template>
 

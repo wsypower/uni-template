@@ -31,13 +31,13 @@
   ],
   "globalStyle": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "uni-app",
-    "navigationBarBackgroundColor": "#1AA86C",
+    "navigationBarTitleText": "uni-app模板",
+    "navigationBarBackgroundColor": "#409EFF",
     "backgroundColor": "#F8F8F8"
   },
   "tabBar": {
-    "color": "#1AA86C",
-    "selectedColor": "#1AA86C",
+    "color": "#409EFF",
+    "selectedColor": "#409EFF",
     "borderStyle": "white",
     "backgroundColor": "#ffffff",
     "list": [
