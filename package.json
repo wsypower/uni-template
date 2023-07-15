@@ -41,6 +41,7 @@
     "eslint": "eslint --ext .vue,.ts src/ --fix",
     "stylelint": "stylelint \"src/**/*.(vue|scss|css)\" --fix",
     "postinstall": "husky install",
+    "preinstall": "npx only-allow pnpm",
     "add": "node ./auto/addPage.ts",
     "cz": "git add . && cz",
     "tag": "npm version patch && git push && git push origin --tags"
@@ -59,6 +60,7 @@
     "@dcloudio/uni-mp-toutiao": "3.0.0-3080720230703001",
     "@dcloudio/uni-mp-weixin": "3.0.0-3080720230703001",
     "@dcloudio/uni-quickapp-webview": "3.0.0-3080720230703001",
+    "@dcloudio/uni-ui": "^1.4.28",
     "@types/vue-i18n": "^7.0.0",
     "pinia": "2.0.33",
     "pinia-auto-refs": "0.0.5",
@@ -107,5 +109,10 @@
   },
   "engines": {
     "node": ">=16.0.0"
+  },
+  "pnpm":{
+    "peerDependencyRules": {
+      "ignoreMissing": ["jest","jest-environment-node"]
+    }
   }
 }

@@ -20,6 +20,7 @@ specifiers:
   '@dcloudio/uni-mp-weixin': 3.0.0-3080720230703001
   '@dcloudio/uni-quickapp-webview': 3.0.0-3080720230703001
   '@dcloudio/uni-stacktracey': 3.0.0-3080720230703001
+  '@dcloudio/uni-ui': ^1.4.28
   '@dcloudio/vite-plugin-uni': 3.0.0-3080720230703001
   '@types/vue-i18n': ^7.0.0
   '@vue/eslint-config-typescript': 11.0.2
@@ -72,6 +73,7 @@ dependencies:
   '@dcloudio/uni-mp-toutiao': 3.0.0-3080720230703001_postcss@8.4.26+vue@3.2.47
   '@dcloudio/uni-mp-weixin': 3.0.0-3080720230703001_postcss@8.4.26+vue@3.2.47
   '@dcloudio/uni-quickapp-webview': 3.0.0-3080720230703001_postcss@8.4.26+vue@3.2.47
+  '@dcloudio/uni-ui': 1.4.28
   '@types/vue-i18n': 7.0.0_vue@3.2.47
   pinia: 2.0.33_yq2pyqi2yjztetnx45sawcgrle
   pinia-auto-refs: 0.0.5
@@ -1691,6 +1693,11 @@ packages:
     peerDependencies:
       jest: 27.0.4
       jest-environment-node: 27.5.1
+    peerDependenciesMeta:
+      jest:
+        optional: true
+      jest-environment-node:
+        optional: true
     dependencies:
       '@dcloudio/uni-cli-shared': 3.0.0-3080720230703001_postcss@8.4.26+vue@3.2.47
       address: 1.2.2
@@ -2093,6 +2100,10 @@ packages:
       - supports-color
       - ts-node
       - vue
+    dev: false
+
+  /@dcloudio/uni-ui/1.4.28:
+    resolution: {integrity: sha512-e/lSbvR79KH9+d3D4ueNbvD6szigjO/5IyjBNmiTqaj0PTS324fBV3L6f3s1qpkYonM4rdOl000hVOcAg6Gh/A==}
     dev: false
 
   /@dcloudio/vite-plugin-uni/3.0.0-3080720230703001_7aaprn3hx7v5ttkjxdgb3ch4ye:

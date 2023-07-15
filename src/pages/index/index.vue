@@ -2,7 +2,7 @@
  * @Description:
  * @Author: wsy
  * @Date: 2023-07-15 15:10:30
- * @LastEditTime: 2023-07-15 19:57:56
+ * @LastEditTime: 2023-07-15 22:48:57
  * @LastEditors: wsy
 -->
 <script setup lang="ts">
@@ -27,9 +27,12 @@ function goTest() {
     <view class="text-area">
       <text class="title">{{ title }}</text>
     </view>
-    <view @click="changeTitle">changeTitle</view>
+    <view h-60rpx bg="blue" @click="changeTitle">changeTitle</view>
     <view @click="goTest">这是测试页面</view>
     <Test></Test>
+    <uni-card :title="title">
+      <text>{{ title }} </text>
+    </uni-card>
   </view>
 </template>
 
