@@ -12,7 +12,12 @@ page {
   color: #333;
 }
 button {
+  background-color: $uni-primary;
   &[type='primary'] {
     background-color: $uni-primary;
+    &:active,
+    &:focus {
+      background-color: darken($uni-primary, 10%);
+    }
   }
 }
