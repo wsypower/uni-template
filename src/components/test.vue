@@ -1,8 +1,19 @@
 <script setup lang="ts">
 const a = 1;
-
+onLoad(() => {
+  console.log('onLoad');
+});
+onShow(() => {
+  console.log('onShow');
+});
+onHide(() => {
+  console.log('onHide');
+});
+onUnload(() => {
+  console.log('onUnload');
+});
 onMounted(() => {
-  console.log('onMounted123');
+  console.log('onMounted');
 });
 </script>
 
