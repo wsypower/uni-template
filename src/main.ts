@@ -9,6 +9,7 @@ import 'uno.css';
 import { createSSRApp } from 'vue';
 import App from './App.vue';
 import store from '@/store';
+import '@/static/css/index.scss';
 
 export function createApp() {
   const app = createSSRApp(App).use(store);
