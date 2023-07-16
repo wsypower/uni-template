@@ -2,7 +2,7 @@
  * @Description:
  * @Author: wsy
  * @Date: 2023-07-15 15:10:30
- * @LastEditTime: 2023-07-16 16:03:43
+ * @LastEditTime: 2023-07-16 16:30:45
  * @LastEditors: wsy
 -->
 <script setup lang="ts">
@@ -32,6 +32,32 @@ function goTest() {
       <text>{{ title }} </text>
     </uni-card>
     <button type="primary">页面主操作 Normal</button>
+    <uni-group title="分组1" top="20">
+      <view>分组1 的内容</view>
+      <view>分组1 的内容</view>
+    </uni-group>
+    <uni-card is-full>
+      <text class="uni-h6">标签组件多用于商品分类、重点内容显示等场景。</text>
+    </uni-card>
+    <uni-section full title="实心标签" type="line" padding>
+      <view class="example-body">
+        <view class="tag-view">
+          <uni-tag text="标签" type="primary" />
+        </view>
+        <view class="tag-view">
+          <uni-tag text="标签" type="success" />
+        </view>
+        <view class="tag-view">
+          <uni-tag text="标签" type="warning" />
+        </view>
+        <view class="tag-view">
+          <uni-tag text="标签" type="error" />
+        </view>
+        <view class="tag-view">
+          <uni-tag text="标签" />
+        </view>
+      </view>
+    </uni-section>
   </view>
 </template>
 

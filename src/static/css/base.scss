@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import './color.scss';
 body {
   height: 100%;
   font-size: 28rpx;
@@ -14,6 +13,6 @@ page {
 }
 button {
   &[type='primary'] {
-    background-color: themed('primary');
+    background-color: $uni-primary;
   }
 }
