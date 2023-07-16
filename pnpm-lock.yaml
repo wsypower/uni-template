@@ -57,7 +57,6 @@ specifiers:
   unplugin-vue-components: 0.24.1
   vite: 4.1.4
   vue: ^3.2.45
-  vue-global-api: 0.4.1
   vue-i18n: ^9.1.9
   vue-tsc: 1.2.0
 
@@ -121,7 +120,6 @@ devDependencies:
   unplugin-auto-import: 0.15.1
   unplugin-vue-components: 0.24.1_vue@3.2.47
   vite: 4.1.4_sass@1.59.2
-  vue-global-api: 0.4.1_vue@3.2.47
   vue-tsc: 1.2.0_typescript@4.9.4
 
 packages:
@@ -5109,10 +5107,6 @@ packages:
       eslint: 8.36.0
     dev: true
 
-  /eslint-config-vue-global-api/0.4.1:
-    resolution: {integrity: sha512-mJTiKBGLe1FXmEifYzCQzUTBpFv8OtfYzP6PAOuVRf+3hkGLMeiDh4bVzZEaJfdExtc8mPw9vp35YSLhwTselQ==}
-    dev: true
-
   /eslint-import-resolver-node/0.3.7:
     resolution: {integrity: sha512-gozW2blMLJCeFpBwugLTGyvVjNoeo1knonXAcatC6bjPBZitotxdWf7Gimr25N4c0AAOo4eOUfaG82IJPDpqCA==}
     dependencies:
@@ -8800,6 +8794,7 @@ packages:
         optional: true
     dependencies:
       vue: 3.2.47
+    dev: false
 
   /vue-eslint-parser/9.3.1_eslint@8.36.0:
     resolution: {integrity: sha512-Clr85iD2XFZ3lJ52/ppmUDG/spxQu6+MAeHXjjyI4I1NUYZ9xmenQp4N0oaHJhrA8OOxltCVxMRfANGa70vU0g==}
@@ -8817,16 +8812,6 @@ packages:
       semver: 7.5.4
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /vue-global-api/0.4.1_vue@3.2.47:
-    resolution: {integrity: sha512-283vpYOhVHJCpMkjNVEwZdgaAb+Y93zFaXGAWTI378MLoNuwQydjD/BAy1e81QYEmyA+JbxqcmMZVWcM9rbriw==}
-    dependencies:
-      eslint-config-vue-global-api: 0.4.1
-      vue-demi: 0.14.5_vue@3.2.47
-    transitivePeerDependencies:
-      - '@vue/composition-api'
-      - vue
     dev: true
 
   /vue-i18n/9.2.2_vue@3.2.47:
