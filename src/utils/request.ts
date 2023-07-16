@@ -1,8 +1,25 @@
+/*
+ * @Description:
+ * @Author: wsy
+ * @Date: 2023-07-15 15:10:30
+ * @LastEditTime: 2023-07-16 15:18:17
+ * @LastEditors: wsy
+ */
 import { isDevelopment, isH5 } from './platform';
 import { forward } from './router';
 import { getCommonParams } from '@/config/commonParams';
 import env from '@/config/env';
 import { hideLoading, showLoading } from '@/config/serviceLoading';
+
+const enum RequestMethod {
+  GET = 'GET',
+  POST = 'POST',
+  PUT = 'PUT',
+  DELETE = 'DELETE',
+  OPTIONS = 'OPTIONS',
+  HEAD = 'HEAD',
+  TRACE = 'TRACE'
+}
 
 function reject(err: { errno: number; errmsg: string }) {
   const { errmsg = '抢购火爆，稍候片刻！', errno = -1 } = err;
@@ -24,16 +41,7 @@ function reject(err: { errno: number; errmsg: string }) {
 const apiBaseUrl = isH5 && isDevelopment ? '/api' : env.apiBaseUrl;
 
 function baseRequest(
-  method:
-    | 'OPTIONS'
-    | 'GET'
-    | 'HEAD'
-    | 'POST'
-    | 'PUT'
-    | 'DELETE'
-    | 'TRACE'
-    | 'CONNECT'
-    | undefined,
+  method: RequestMethod,
   url: string,
   data: { isLoading: any }
 ) {
@@ -46,13 +54,11 @@ function baseRequest(
       method,
       timeout: 20000,
       header: {
-        'content-type':
-          method === 'GET'
-            ? 'application/json; charset=utf-8'
-            : 'application/x-www-form-urlencoded'
+        'content-type': 'application/json; charset=utf-8'
       },
       data,
       success: (res: any) => {
+        // TODO: 根据后端返回的状态码做相应的处理
         if (res.statusCode >= 200 && res.statusCode < 400) {
           if (res.data.errno === 0) {
             responseDate = res.data;
@@ -62,7 +68,7 @@ function baseRequest(
         } else {
           reject({
             errno: -1,
-            errmsg: '抢购火爆，稍候片刻！'
+            errmsg: res.errMsg
           });
         }
       },
@@ -73,7 +79,6 @@ function baseRequest(
         });
       },
       complete: (data) => {
-        console.log(data, 'data');
         resolve(responseDate);
         hideLoading();
       }
@@ -83,12 +88,12 @@ function baseRequest(
 
 const http = {
   get: <T>(api: string, params: any) =>
-    baseRequest('GET', api, {
+    baseRequest(RequestMethod.GET, api, {
       ...getCommonParams(),
       ...params
     }) as Http.Response<T>,
   post: <T>(api: string, params: any) =>
-    baseRequest('POST', api, {
+    baseRequest(RequestMethod.POST, api, {
       ...getCommonParams(),
       ...params
     }) as Http.Response<T>
