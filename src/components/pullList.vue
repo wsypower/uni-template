@@ -1,3 +1,10 @@
+<!--
+ * @Description:
+ * @Author: wsy
+ * @Date: 2023-07-15 15:10:30
+ * @LastEditTime: 2023-07-16 14:27:44
+ * @LastEditors: wsy
+-->
 <script setup lang="ts">
 import type {
   ScrollViewOnScroll,
@@ -6,9 +13,9 @@ import type {
 
 withDefaults(
   defineProps<{
-    scrollTop: number;
-    onScrollToLower: ScrollViewOnScrolltolower;
-    onScroll: ScrollViewOnScroll;
+    scrollTop?: number;
+    scrollToLower?: ScrollViewOnScrolltolower;
+    scroll?: ScrollViewOnScroll;
   }>(),
   {
     scrollTop: 0,
@@ -31,8 +38,8 @@ withDefaults(
     :scroll-y="true"
     :lower-threshold="300"
     :scroll-top="scrollTop"
-    @scrolltolower="onScrollToLower"
-    @scroll="onScroll"
+    @scroll-to-lower="scrollToLower"
+    @scroll="scroll"
   >
     <slot name="list"></slot>
   </scroll-view>
